@@ -1,0 +1,483 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: aparecer 1s ease-in forwards;
+    background-color: #ffffff;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='500' height='500' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23fa63ff' fill-opacity='0.7' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#message-container button {
+    font-size: 1.5em;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    /* opacity: 0.7; */
+    font-family: "Verdana", sans-serif;
+    cursor: pointer;
+}
+
+.container-mensaje {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    background-color: transparent;
+    text-align: center;
+}
+
+.mensaje input {
+    display: flex;
+    width: 600px;
+    height: 40px;
+    /* Reducimos la altura para que se vea más proporcionado */
+    padding: 5px 10px;
+    /* Aumentamos el espacio interno */
+    font-size: 20px;
+    /* Reducimos el tamaño de fuente */
+    font-family: "Verdana", sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.revelar button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    height: 50px;
+    font-size: 20px;
+    font-family: "Verdana", sans-serif;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 1s ease, background-color 1s ease;
+    /* Cambiamos la duración de la transición a 3s */
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+
+    &:hover {
+        background-color: #ffffff;
+        color: black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+
+
+.btn-1 {
+    background-color: #fcff65;
+    transition: box-shadow 0.3s ease;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.btn-1:hover {
+    background-color: #f3f97a;
+    box-shadow: 0 0 10px rgba(255, 255, 101, 0.8);
+}
+
+.btn-2 {
+    background-color: #60ff7a;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-2:hover {
+    background-color: #7cff96;
+    box-shadow: 0 0 10px rgba(96, 255, 122, 0.8);
+}
+
+.btn-3 {
+    background-color: #6affdf;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-3:hover {
+    background-color: #8bf7ff;
+    box-shadow: 0 0 10px rgba(106, 255, 223, 0.8);
+}
+
+.btn-4 {
+    background-color: #67dbff;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-4:hover {
+    background-color: #8ae7ff;
+    box-shadow: 0 0 10px rgba(103, 219, 255, 0.8);
+}
+
+.btn-5 {
+    background-color: #655afd;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-5:hover {
+    background-color: #847cff;
+    box-shadow: 0 0 10px rgba(101, 90, 253, 0.8);
+}
+
+.btn-6 {
+    background-color: #a25cff;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-6:hover {
+    background-color: #b891ff;
+    box-shadow: 0 0 10px rgba(162, 92, 255, 0.8);
+}
+
+.btn-7 {
+    background-color: #fa5bff;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-7:hover {
+    background-color: #ff82f2;
+    box-shadow: 0 0 10px rgba(250, 91, 255, 0.8);
+}
+
+.btn-8 {
+    background-color: #ff60bd;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-8:hover {
+    background-color: #ff80d5;
+    box-shadow: 0 0 10px rgba(255, 96, 189, 0.8);
+}
+
+.btn-9 {
+    background-color: #ff5a5a;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-9:hover {
+    background-color: #ff7e7e;
+    box-shadow: 0 0 10px rgba(255, 90, 90, 0.8);
+}
+
+.btn-10 {
+    background-color: #ff725a;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-10:hover {
+    background-color: #ff917b;
+    box-shadow: 0 0 10px rgba(255, 114, 90, 0.8);
+}
+
+.btn-11 {
+    background-color: #ffbc58;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-11:hover {
+    background-color: #ffcc82;
+    box-shadow: 0 0 10px rgba(255, 188, 88, 0.8);
+}
+
+.btn-12 {
+    background-color: #ffc861;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-12:hover {
+    background-color: #ffd986;
+    box-shadow: 0 0 10px rgba(255, 200, 97, 0.8);
+}
+
+.btn-13 {
+    background-color: #ffe75f;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-13:hover {
+    background-color: #fff182;
+    box-shadow: 0 0 10px rgba(255, 231, 95, 0.8);
+}
+
+.btn-14 {
+    background-color: #deff65;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-14:hover {
+    background-color: #f0ffa0;
+    box-shadow: 0 0 10px rgba(222, 255, 101, 0.8);
+}
+
+.btn-15 {
+    background-color: #90ff63;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-15:hover {
+    background-color: #a5ffb3;
+    box-shadow: 0 0 10px rgba(144, 255, 99, 0.8);
+}
+
+.btn-16 {
+    background-color: #76ff64;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-16:hover {
+    background-color: #8eff82;
+    box-shadow: 0 0 10px rgba(118, 255, 100, 0.8);
+}
+
+.btn-17 {
+    background-color: #68ff8e;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-17:hover {
+    background-color: #7effa3;
+    box-shadow: 0 0 10px rgba(104, 255, 142, 0.8);
+}
+
+.btn-18 {
+    background-color: #68fdb7;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-18:hover {
+    background-color: #7fffd2;
+    box-shadow: 0 0 10px rgba(104, 253, 183, 0.8);
+}
+
+.btn-19 {
+    background-color: #65ceff;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-19:hover {
+    background-color: #7bd9ff;
+    box-shadow: 0 0 10px rgba(101, 206, 255, 0.8);
+}
+
+.btn-20 {
+    background-color: #6ab0ff;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-20:hover {
+    background-color: #80ccff;
+    box-shadow: 0 0 10px rgba(106, 176, 255, 0.8);
+}
+
+.btn-21 {
+    background-color: #6a60ff;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-21:hover {
+    background-color: #7f78ff;
+    box-shadow: 0 0 10px rgba(106, 96, 255, 0.8);
+}
+
+.btn-22 {
+    background-color: #9258ff;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-22:hover {
+    background-color: #a27bff;
+    box-shadow: 0 0 10px rgba(146, 88, 255, 0.8);
+}
+
+.btn-23 {
+    background-color: #bf5fff;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-23:hover {
+    background-color: #d284ff;
+    box-shadow: 0 0 10px rgba(191, 95, 255, 0.8);
+}
+
+.btn-24 {
+    background-color: #ff5df1;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-24:hover {
+    background-color: #ff7ee7;
+    box-shadow: 0 0 10px rgba(255, 93, 241, 0.8);
+}
+
+.btn-25 {
+    background-color: #ff65b2;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-25:hover {
+    background-color: #ff7fae;
+    box-shadow: 0 0 10px rgba(255, 101, 178, 0.8);
+}
+
+.btn-26 {
+    background-color: #ff619e;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-26:hover {
+    background-color: #ff7fae;
+    box-shadow: 0 0 10px rgba(255, 97, 158, 0.8);
+}
+
+.btn-27 {
+    background-color: #ff9b61;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-27:hover {
+    background-color: #ffe87f;
+    box-shadow: 0 0 10px rgba(255, 192, 97, 0.8);
+}
+
+.btn-28 {
+    background-color: #d5ff61;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-28:hover {
+    background-color: #f2ff7f;
+    box-shadow: 0 0 10px rgba(194, 255, 97, 0.8);
+}
+
+.btn-29 {
+    background-color: #81ff61;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-29:hover {
+    background-color: #b9ff7f;
+    box-shadow: 0 0 10px rgba(129, 255, 97, 0.8);
+}
+
+.btn-30 {
+    background-color: #61ffb0;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-30:hover {
+    background-color: #7fffd4;
+    box-shadow: 0 0 10px rgba(97, 255, 208, 0.8);
+}
+
+.btn-31 {
+    background-color: #618bff;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-31:hover {
+    background-color: #7f8cff;
+    box-shadow: 0 0 10px rgba(97, 100, 255, 0.8);
+}
+
+/* Estilos para pantallas más pequeñas (ej. teléfonos) */
+@media only screen and (max-width: 768px) {
+    .container-mensaje {
+        width: 95%;
+    }
+
+    .mensaje input {
+        font-size: 15px;
+        width: 300px;
+        height: 25px;
+    }
+
+    #message-container button {
+        font-size: 10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 25px;
+        height: 25px;
+        margin: 2px;
+        padding: 1px 2px;
+        border: none;
+        /* opacity: 0.7; */
+        font-family: "Verdana", sans-serif;
+        cursor: pointer;
+    }
+
+    .revelar button {
+        width: 150px;
+        height: 30px;
+        font-size: 15px;
+    }
+}
+
+#message-container button {
+    /* ... (tu código existente) */
+    transition: transform 0.3s ease;
+    /* Agregamos transición para la propiedad transform */
+}
+
+.btn-1,
+.btn-2,
+.btn-3,
+.btn-4,
+.btn-5,
+.btn-6,
+.btn-7,
+.btn-8,
+.btn-9,
+.btn-10,
+.btn-11,
+.btn-12,
+.btn-13,
+.btn-14,
+.btn-15,
+.btn-16,
+.btn-17,
+.btn-18,
+.btn-19,
+.btn-20,
+.btn-21,
+.btn-22,
+.btn-23,
+.btn-24,
+.btn-25,
+.btn-26,
+.btn-27,
+.btn-28,
+.btn-29,
+.btn-30,
+.btn-31 {
+    /* ... (tu código existente) */
+    transition: transform 0.3s ease;
+    /* Agregamos transición para la propiedad transform */
+}
